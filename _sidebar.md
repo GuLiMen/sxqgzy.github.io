@@ -1,4 +1,4 @@
-* [新生寄语](/readme)
+* [新生寄语](#新生寄语)
 * [关于学校](/aboutSchool)
 * [录取相关](/admissionsRelated)
 * [通知书相关](/noticeRelated)
