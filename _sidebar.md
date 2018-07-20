@@ -1,0 +1,7 @@
+* [新生寄语](readme)
+* [关于学校](aboutSchool)
+* [录取相关](admissionsRelated)
+* [通知书相关](noticeRelated)
+* [开学](schoolOpens)
+* [其他](other)
+* [群聊](qqgroup)

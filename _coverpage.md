@@ -10,7 +10,7 @@
 * 来自学长真实经历撰写分享
 * 如有其他疑问请联系我们 [@COSF](http://cosf.gq)。
 
-[关于](https://cosf.gq/about)
+[加群](https://shang.qq.com/wpa/qunwpa?idkey=2d679645d055ae2c5c6d74cbbce035b280f2617f34f3b72e3bcbfb7c1ceccde5)
 [开始](#开始)
 
 
