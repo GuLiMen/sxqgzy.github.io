@@ -26,5 +26,5 @@
 
 <iframe style="
     width: 100%;
-    min-height: 800px;
-" src="https://ditu.amap.com/place/B015F14DY1" frameborder="0"></iframe>
+    min-height: 600px;
+" src="map.html" frameborder="0"></iframe>
