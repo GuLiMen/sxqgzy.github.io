@@ -3,5 +3,6 @@
 * [录取相关](/admissionsRelated)
 * [通知书相关](/noticeRelated)
 * [开学](/schoolOpens)
-* [其他](/other)
+* [画廊](/gallery)
 * [群聊](/qqgroup)
+* [其他](/other)
