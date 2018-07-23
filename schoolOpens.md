@@ -18,6 +18,8 @@
 
 ## 学校在哪?
 
+> 山西省太原市马道坡街57号
+
 <iframe style="
     width: 100%;
     min-height: 600px;
