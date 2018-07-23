@@ -6,3 +6,4 @@
 ![2.jpg](https://i.loli.net/2018/07/23/5b5580a0c1174.jpg)
 ![3.jpg](https://i.loli.net/2018/07/23/5b5580a054f87.jpg)
 ![4.jpg](https://i.loli.net/2018/07/23/5b5580a0565f5.jpg)
+> 图片来源[招生简章](http://sxqgzy.cn/a/zhaoshengjiuye/zhaoshengjianzhang/2018/0707/1317.html)
