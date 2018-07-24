@@ -6,6 +6,10 @@
 
 [http://www.sxqgzy.cn](http://www.sxqgzy.cn)
 
+## 有学校平面图吗？
+
+![平面图](https://i.loli.net/2018/07/24/5b56a4aef133c.png)
+
 ## 学校招收哪些专业？
 
 今年招生专业有 21 个，具体计划如下：
