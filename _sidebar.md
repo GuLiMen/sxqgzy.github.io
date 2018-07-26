@@ -5,5 +5,6 @@
 * [招生简章](/qg2018poster)
 * [开学](/schoolOpens)
 * [画廊](/gallery)
+* [课程介绍](/courseIntroduction)
 * [群聊](/qqgroup)
 * [其他](/other)
