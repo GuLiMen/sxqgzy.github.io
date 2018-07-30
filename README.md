@@ -41,6 +41,8 @@
 
 我们始终鼓励你加入由我们成员创建的新生群: [830857439](https://shang.qq.com/wpa/qunwpa?idkey=2d679645d055ae2c5c6d74cbbce035b280f2617f34f3b72e3bcbfb7c1ceccde5)
 
+!> 三个群选一个加就好了，但是你们能不能不要加进来秒退啊！我不要面子的嘛？![bq2.jpg](https://i.loli.net/2018/07/30/5b5e8574c76da.jpg)
+
 ![2018qrcode](_media/2018qrcode.png)
 
 其他群聊你可以点击[这里](qqgroup.md)查看
