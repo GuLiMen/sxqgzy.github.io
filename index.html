@@ -24,7 +24,10 @@
       plugins: [
         function (hook, vm) {
           hook.beforeEach(function (html) {
-            return html
+            const warnning = "任何提前、收费的报名均为欺诈行为，警防受骗！若已被骗请尽快联系学院招办举报或投诉！";
+            return "<p class='tip' style='background: #ff6666;color: white;'>"+warnning+"</p>" 
+              + "\n\n"
+              +  html
               + '\n\n----\n\n'
               + '<a href="https://github.com/sxqgzy" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">轻院计算机开源学会(COSF)</a>'
           })
