@@ -1,14 +1,12 @@
 # 群聊
 
-这里准备一波新手群，你可以选择加入哟 (´▽`ʃ♡ƪ)
+这里准备一波新生群，你可以选择加入哟 (´▽`ʃ♡ƪ)
 
 ## [830857439](https://shang.qq.com/wpa/qunwpa?idkey=2d679645d055ae2c5c6d74cbbce035b280f2617f34f3b72e3bcbfb7c1ceccde5)
-
 
 我们始终鼓励你加入由我们成员创建的新生群: [830857439](https://shang.qq.com/wpa/qunwpa?idkey=2d679645d055ae2c5c6d74cbbce035b280f2617f34f3b72e3bcbfb7c1ceccde5)
 
 ![2018qrcode](_media/2018qrcode.png)~~无耻.jpg~~_(:з」∠)_
-
 
 ## 822362074
     
