@@ -39,3 +39,28 @@
 应用电子技术|9|1|10|90.00% / 10.00%
 
 !> 看到这个比例还请不要担心，因为还有 3+2 、普高以及单独招生的暂时无法纳入统计。
+
+以上数据使用如下代码获取：
+```javascript
+function gettr(a,b) {
+    var contents = document.querySelectorAll('.blog-main td');
+    var name = '';
+    var xb = "";
+    var size = 0;
+    [].forEach.call(contents, function (content) {
+        text = content.innerHTML.replace(/\s+/g,"");
+        if (text == "男" || text == "女") xb = text;
+        if (xb == a && text==b){
+            content.parentNode.style.display = "inherit";
+            ++size;
+        }else if(xb == a && b=="All"){
+            content.parentNode.style.display = "inherit";
+        }else{
+            content.parentNode.style.display = "none";
+        }
+    });
+    console.log("专业 【"+b + "】"+a+"生共有:" + size + "人");
+    document.querySelector('tr').style.display="inherit";
+}
+gettr("女","工程造价");
+```
