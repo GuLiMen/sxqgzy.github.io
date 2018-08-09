@@ -12,6 +12,15 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+  <style>
+    .sidebar-toggle span {
+      background-color: var(--theme-color, #42b983);
+      display: block;
+      margin-bottom: 4px;
+      width: 25px;
+      height: 4px;
+    }
+  </style>
 </head>
 
 <body>
@@ -25,9 +34,9 @@
         function (hook, vm) {
           hook.beforeEach(function (html) {
             const warnning = "对口升学的已经开始逐步录取！请大家留意山西招生考试网！";
-            return "<p class='tip' style='background: #f66;color: white;'>"+warnning+"</p>" 
+            return "<p class='tip' style='background: #f66;color: white;'>" + warnning + "</p>"
               + "\n\n"
-              +  html
+              + html
               + '\n\n----\n\n'
               + '<a href="https://github.com/sxqgzy" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">轻院计算机开源学会(COSF)</a>'
           })
@@ -37,18 +46,6 @@
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script>
-    const gitalk = new Gitalk({
-      clientID: '9099e1fc67877459afc0',
-      clientSecret: '08ee10a3ceadbce14c5516910561ae2016a73e16',
-      repo: 'sxqgzy.github.io',
-      owner: 'sxqgzy',
-      admin: ['kejunmao','sxqgzy'],
-      distractionFreeMode: false
-    })
-  </script>
 </body>
 
 </html>

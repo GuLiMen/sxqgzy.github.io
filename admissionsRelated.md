@@ -18,7 +18,8 @@
 
 登录[山西招生考试网](www.sxkszx.cn)查询录取信息。或：
 
-[2018年对口升学录取名单（8.3）](http://www.sxqgzy.cn/m/view.php?aid=1415)
+* [官方-2018年对口升学录取名单（8.3）](http://www.sxqgzy.cn/m/view.php?aid=1415)
+* [优化阅读-2018年对口升学录取名单](luqu.md)
 
 ## 普高录取在哪查啊？
 
