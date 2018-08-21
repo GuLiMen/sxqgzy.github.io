@@ -16,16 +16,17 @@
 
 ## 已知学校各专业分别录取了多少人？
 
-下列人员统计仅包含：
+以下统计为手动更新，因此仅供参考：
+
 ### 对口升学
 
 **专业名称**|**男生**|**女生**|**总数**|**比例（男/女）**
 ---|---|---|---|---|---|
-**工程造价**|25|10|35|71.43% / 28.57%
+**工程造价**|36|13|49|73.00% / 27.00%
 **光伏发电技术与应用**|30|0|30|100.00% / 0.00%
 **化妆品经营与管理**|0|1|1|0.00% / 100.00%
-**环境艺术设计**|4|4|8|50.00% / 50.00%
-**会计**|11|18|29|37.93% / 62.07%
+**环境艺术设计**|8|13|21|38.00% / 62.00%
+**会计**|13|19|32|！41.00% / 59.00%
 **机电一体化技术**|45|0|45|100.00% / 0.00%
 **计算机网络技术**|27|13|40|67.50% / 32.50%
 **精细化工技术**|6|8|14|42.86% / 57.14%
@@ -33,10 +34,11 @@
 **食品营养与检测**|1|19|20|5.00% / 95.00%
 **市场营销**|1|1|2|50.00% / 50.00%
 **视觉传播设计与制作**|0|10|10|0.00% / 100.00%
-**数字图文信息技术**|9|16|25|36.00% / 64.00%
+**数字图文信息技术**|29|29|58|！50.00% / 50.00%
 **铁道交通运营管理**|39|2|41|95.12% / 4.88%
-**铁路物流管理**|2|2|4|50.00% / 50.00%
-**应用电子技术**|9|1|10|90.00% / 10.00%
+**铁路物流管理**|2|3|5|！50.00% / 50.00%
+**应用电子技术**|19|1|20|！95.00% / 5.00%
+**应用化工技术**|	8|	9|	17|	47% / 53%
 
 ### 普通高考
 
@@ -66,29 +68,53 @@
 
 ### 合计
 
-* 男生总数：463
-* 女生总数：190
-* 总数：653
-* 男女比例：70.90%/29.10%
+* 男生总数：254+264
+* 女生总数：83+143
+* 总数：744
+* 男女比例：69.62%/30.38%
 
-?> 这样的看的话，今年的女生比去年还要低 0.42 个百分点。
+?> 这样的看的话，今年的女生比例要比去年还要高！
 
 !> 不过！看到这个比例还请不要担心，因为还有 3+2 以及单独招生的无法纳入统计。
 
 以上数据使用如下代码获取：
 ```javascript
-function gettr(a,b) {
-    var contents = document.querySelectorAll('.blog-content table table tr');
-    var size = 0;
-    for (var i = 1;i<contents.length;i++){
-        var childrenLen = contents[i].children.length;
-        var xb = contents[i].children[childrenLen-2].innerText;
-        var zy = contents[i].children[childrenLen-1].innerText;
-        if(xb == a && zy == b){
-            size++;
+function gettr() {
+        var contents = document.querySelectorAll('.blog-content table table tr');
+        var table = {}
+        table.size = {
+            man: 0,
+            woman:0
+        }
+        for (var i = 1; i < contents.length; i++) {
+            var childrenLen = contents[i].children.length;
+            var zy = contents[i].children[childrenLen - 1].innerText;
+            if(table[zy] == undefined){
+                table[zy] = {
+                    man: 0,
+                    woman:0
+                };
+            }
+            var xb = contents[i].children[childrenLen - 2].innerText;
+            if(xb == '男'){
+                table[zy].man++;
+                table.size.man++;
+            }else{
+                table[zy].woman++;
+                table.size.woman++;
+            }
+        }
+        return table;
+    }
+    var table = gettr();
+    console.log('专业\t男\t女\t总数\t男女比例')
+    for (ele in table){
+        if (ele != 'size'){
+            let man = table[ele].man;
+            let woman = table[ele].woman;
+            let all = man + woman;
+            console.log(ele + '\t' + man + '\t' + woman + '\t' + all + '\t'+((man/all).toFixed(2)*100)+'%:'+((woman/all).toFixed(2)*100)+'%');
         }
     }
-    return size;
-}
-gettr("女","工程造价");
+    console.log('总人数：' + (table.size.man+table.size.woman)+'\t总男生：'+table.size.man+'\t总女生：'+table.size.woman);
 ```
