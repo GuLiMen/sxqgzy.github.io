@@ -115,11 +115,7 @@ function gettr() {
             let all = man + woman;
             console.log(ele + '\t' + man + '\t' + woman + '\t' + all + '\t'+((man/all).toFixed(2)*100)+'%:'+((woman/all).toFixed(2)*100)+'%');
         }
-    });
-    console.log("专业 【"+b + "】"+a+"生共有:" + size + "人");
-    document.querySelector('tr').style.display="inherit";
-}
-gettr("女","工程造价");
+    };
 ```
 
 ## 已知录取学生在山西省的分布情况？
