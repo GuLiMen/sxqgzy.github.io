@@ -30,29 +30,6 @@
 
 > TODO...
 
-以上数据使用如下代码获取：
-```javascript
-var tbody = $('table').children[0].children
-var man = 0;
-var woman = 0;
-var content = ''
-
-Array.from(tbody).forEach(tr => {
-  var text = '| '
-  Array.from(tr.children).forEach(td=>{
-    if (td.innerText==='男'){
-      man += 1;
-    } else if (td.innerText === '女'){
-      woman += 1
-    }
-    text += td.innerText + ' | '
-  })
-  content += text + '\n'
-});
-console.log(content)
-console.log(`男：${man} 女${woman}`)
-```
-
 ## 已知录取学生在山西省的分布情况？
 
 数据根据考生号过滤，以 19140702150995 为例，19 表示年份，140702 表示地区，也就是1407xx是晋中，140702榆次区。
