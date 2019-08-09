@@ -55,17 +55,112 @@ console.log(`男：${man} 女${woman}`)
 
 ## 已知录取学生在山西省的分布情况？
 
-数据根据考生号过滤，以 18140702150995 为例，18 表示年份，140702 表示地区，也就是1407xx是晋中，140702榆次区。
+数据根据考生号过滤，以 19140702150995 为例，19 表示年份，140702 表示地区，也就是1407xx是晋中，140702榆次区。
 
-!> Q：为什么我是xx地区的，但是没有统计我？A：首先该统计依然没有3+2以及单独招生！其此就是因为各种不可抗因素导致，因此该分布图仅供参考。
+!> Q：为什么我是xx地区的，但是没有统计我？A：首先该统计没有普高生源！其此就是因为各种不可抗因素导致，因此仅供参考。
 
-### 按市分布
-
-> TODO...
-
-### 按县分布
-
-> TODO...
+- 太原市: 593 人
+	 - 小店区: 6 人
+	 - 迎泽区: 1 人
+	 - 杏花岭区: 2 人
+	 - 尖草坪区: 2 人
+	 - 万柏林区: 10 人
+	 - 晋源区: 506 人
+	 - 阳曲县: 2 人
+	 - 古交市: 64 人
+- 大同市: 21 人
+	 - 阳高县: 13 人
+	 - 灵丘县: 5 人
+	 - 浑源县: 1 人
+	 - 左云县: 2 人
+- 阳泉市: 9 人
+	 - 城区: 2 人
+	 - 郊区: 3 人
+	 - 平定县: 3 人
+	 - 盂县: 1 人
+- 长治市: 70 人
+	 - 城区: 12 人
+	 - 长治县: 1 人
+	 - 襄垣县: 3 人
+	 - 屯留县: 4 人
+	 - 黎城县: 1 人
+	 - 壶关县: 2 人
+	 - 长子县: 2 人
+	 - 武乡县: 5 人
+	 - 沁县: 31 人
+	 - 沁源县: 7 人
+	 - 潞城市: 2 人
+- 晋城市: 33 人
+	 - 城区: 12 人
+	 - 沁水县: 1 人
+	 - 阳城县: 6 人
+	 - 陵川县: 10 人
+	 - 泽州县: 2 人
+	 - 高平市: 2 人
+- 朔州市: 36 人
+	 - 朔城区: 4 人
+	 - 平鲁区: 2 人
+	 - 山阴县: 1 人
+	 - 应县: 29 人
+- 晋中市: 248 人
+	 - 榆次区: 16 人
+	 - 榆社县: 5 人
+	 - 左权县: 3 人
+	 - 和顺县: 1 人
+	 - 昔阳县: 2 人
+	 - 寿阳县: 2 人
+	 - 太谷县: 7 人
+	 - 祁县: 3 人
+	 - 平遥县: 12 人
+	 - 灵石县: 2 人
+	 - 介休市: 195 人
+- 运城市: 79 人
+	 - 盐湖区: 9 人
+	 - 临猗县: 14 人
+	 - 万荣县: 4 人
+	 - 闻喜县: 9 人
+	 - 稷山县: 4 人
+	 - 新绛县: 20 人
+	 - 绛县: 1 人
+	 - 垣曲县: 2 人
+	 - 夏县: 4 人
+	 - 平陆县: 1 人
+	 - 芮城县: 5 人
+	 - 永济市: 6 人
+- 忻州市: 68 人
+	 - 忻府区: 2 人
+	 - 定襄县: 32 人
+	 - 五台县: 8 人
+	 - 代县: 6 人
+	 - 繁峙县: 2 人
+	 - 宁武县: 1 人
+	 - 静乐县: 2 人
+	 - 神池县: 1 人
+	 - 岢岚县: 2 人
+	 - 河曲县: 6 人
+	 - 原平市: 6 人
+- 临汾市: 32 人
+	 - 尧都区: 12 人
+	 - 曲沃县: 6 人
+	 - 翼城县: 2 人
+	 - 襄汾县: 3 人
+	 - 洪洞县: 4 人
+	 - 古县: 1 人
+	 - 安泽县: 1 人
+	 - 吉县: 2 人
+	 - 汾西县: 1 人
+- 吕梁市: 78 人
+	 - 离石区: 9 人
+	 - 文水县: 16 人
+	 - 交城县: 7 人
+	 - 临县: 1 人
+	 - 柳林县: 23 人
+	 - 石楼县: 4 人
+	 - 岚县: 6 人
+	 - 方山县: 3 人
+	 - 中阳县: 1 人
+	 - 孝义市: 2 人
+	 - 汾阳市: 6 人
 
 ### 代码
 
@@ -261,56 +356,46 @@ var codejson = {
     ]
 };
 
-function getarea() {
-    var contents = document.querySelectorAll('.blog-content table table tr');
-    var area = {};
-    for (var i = 1; i < contents.length; i++) {
-        var childrenLen = contents[i].children.length;
-        var code = contents[i].children[childrenLen - 4].innerText.split('').slice(2,8);
-        var city = code.slice(0,4);
-        city.push("0","0");
-        city = city.join('');
-        codejson.city.forEach(element => {
-            if(element.zip == city){
-                element.county.forEach(ele =>{
-                    if(code.join('') == ele.zip){
-                        if(area[element.name+ele.name] == undefined){
-                            area[element.name+ele.name] = 0;
-                        }
-                        area[element.name+ele.name]++;
-                    }
-                });
-            }
-        })
+var content = [];
+function getCity(code) {
+  codejson.city.forEach((v, key) => {
+    if (!content[key]) {
+      content[key] = {
+        name: v.name,
+        value: 0,
+        county: []
+      }
     }
-    return area;
+    v.county.forEach((area, aKey) => {
+      if (!content[key].county[aKey]){
+        content[key].county[aKey] = {
+          name: area.name,
+          value: 0
+        }
+      }
+      let areaCode = code.split('').slice(2, 8).join('');
+      if (area.zip === areaCode) {
+        content[key].county[aKey].value += 1;
+        content[key].value += 1;
+      }
+    })
+  })
 }
 
-function getcity(){
-    var contents = document.querySelectorAll('.blog-content table table tr');
-    var citys = {};
-    for (var i = 1; i < contents.length; i++) {
-        var childrenLen = contents[i].children.length;
-        var code = contents[i].children[childrenLen - 4].innerText.split('').slice(2,8);
-        var city = code.slice(0,4);
-        city.push("0","0");
-        city = city.join('');
-        codejson.city.forEach(element => {
-            if(element.zip == city){
-                if(citys[element.name] == undefined){
-                    citys[element.name] = 0;
-                }
-                citys[element.name]++;
-            }
-        })
-    }
-    return citys;
-}
+var data = document.getElementsByTagName('tr');
+Array.from(data).forEach(tr => {
+  let stdCode = tr.children[0].innerText;
+  getCity(String(stdCode))
+})
 
-// var areas = getcity();
-// var text = "";
-// for(let area in areas){
-//     text +=(area + "\t" + areas[area] + "\n");
-// }
-// console.log(text);
+var contentText = ''
+content.forEach(v=>{
+  let text = `- ${v.name}: ${v.value} 人\n`
+  v.county.forEach(a=>{
+    if(a.value!==0){
+      text += `\t - ${a.name}: ${a.value} 人\n`
+    }
+  })
+  contentText += text;
+})
 ```
