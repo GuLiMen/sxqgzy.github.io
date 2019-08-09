@@ -32,43 +32,25 @@
 
 以上数据使用如下代码获取：
 ```javascript
-function gettr() {
-        var contents = document.querySelectorAll('.blog-content table table tr');
-        var table = {}
-        table.size = {
-            man: 0,
-            woman:0
-        }
-        for (var i = 1; i < contents.length; i++) {
-            var childrenLen = contents[i].children.length;
-            var zy = contents[i].children[childrenLen - 1].innerText;
-            if(table[zy] == undefined){
-                table[zy] = {
-                    man: 0,
-                    woman:0
-                };
-            }
-            var xb = contents[i].children[childrenLen - 2].innerText;
-            if(xb == '男'){
-                table[zy].man++;
-                table.size.man++;
-            }else{
-                table[zy].woman++;
-                table.size.woman++;
-            }
-        }
-        return table;
+var tbody = $('table').children[0].children
+var man = 0;
+var woman = 0;
+var content = ''
+
+Array.from(tbody).forEach(tr => {
+  var text = '| '
+  Array.from(tr.children).forEach(td=>{
+    if (td.innerText==='男'){
+      man += 1;
+    } else if (td.innerText === '女'){
+      woman += 1
     }
-    var table = gettr();
-    console.log('专业\t男\t女\t总数\t男女比例')
-    for (ele in table){
-        if (ele != 'size'){
-            let man = table[ele].man;
-            let woman = table[ele].woman;
-            let all = man + woman;
-            console.log(ele + '\t' + man + '\t' + woman + '\t' + all + '\t'+((man/all).toFixed(2)*100)+'%:'+((woman/all).toFixed(2)*100)+'%');
-        }
-    };
+    text += td.innerText + ' | '
+  })
+  content += text + '\n'
+});
+console.log(content)
+console.log(`男：${man} 女${woman}`)
 ```
 
 ## 已知录取学生在山西省的分布情况？
