@@ -46,6 +46,19 @@
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: '9099e1fc67877459afc0',
+      clientSecret: '08ee10a3ceadbce14c5516910561ae2016a73e16',
+      repo: 'https://github.com/sxqgzy/sxqgzy.github.io',
+      owner: 'sxqgzy',
+      admin: ['sxqgzy'],
+      // facebook-like distraction free mode
+      distractionFreeMode: false
+    })
+  </script>
 </body>
 
 </html>

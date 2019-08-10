@@ -1378,28 +1378,3 @@
 | 19140110996135 | 王杰颖 | 女 | 视觉传播设计与制作 |
 
 </details>
-
-
-> 以上数据的代码
-
-```javascript
-var tbody = $('table').children[0].children
-var man = 0;
-var woman = 0;
-var content = ''
-
-Array.from(tbody).forEach(tr => {
-  var text = '| '
-  Array.from(tr.children).forEach(td=>{
-    if (td.innerText==='男'){
-      man += 1;
-    } else if (td.innerText === '女'){
-      woman += 1
-    }
-    text += td.innerText + ' | '
-  })
-  content += text + '\n'
-});
-console.log(content)
-console.log(`男：${man} 女${woman}`)
-```
