@@ -9,7 +9,8 @@
   <meta name="description" itemprop="description" content="简单、高效了解轻院！来自学长真实经历撰写分享！如有.." />
   <meta itemprop="name" content="山西轻院 2018 新生常见问题解答" />
   <meta itemprop="image" content="/_media/logo.png" />
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
   <style>
@@ -30,15 +31,22 @@
       loadSidebar: true,
       subMaxLevel: 2,
       name: '新生常见问题解答',
+      search: {
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+        paths: 'auto', // or 'auto'
+        placeholder: '搜索',
+        noData: '找不到结果',
+        depth: 2
+      },
       plugins: [
         function (hook, vm) {
           hook.beforeEach(function (html) {
             const warnning = "填报志愿指南：466页；报考学院代码：6070";
-            return "<p class='tip' style='background: #f66;color: white;'>" + warnning + "</p>"
-              + "\n\n"
-              + html
-              + '\n\n----\n\n'
-              + '<a href="https://github.com/sxqgzy" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">轻院计算机开源学会(COSF)</a>'
+            return "<p class='tip' style='background: #f66;color: white;'>" + warnning + "</p>" +
+              "\n\n" +
+              html +
+              '\n\n----\n\n' +
+              '<a href="https://github.com/sxqgzy" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">轻院计算机开源学会(COSF)</a>'
           })
         },
       ],
@@ -59,6 +67,7 @@
       distractionFreeMode: false
     })
   </script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
 </body>
 
 </html>
