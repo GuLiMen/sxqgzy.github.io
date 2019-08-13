@@ -26,7 +26,7 @@
 
 ### 群聊
 
-我们鼓励你加入由学生会成员创建的新生群: [822362074](https://shang.qq.com/wpa/qunwpa?idkey=f648e57a74f45c6a66d55f427806e826f42aa8ad7e51e5886f6f997b725fdba4)
+我们鼓励你加入由新生们创建的新生群: [680735469](https://shang.qq.com/wpa/qunwpa?idkey=40559d659d38634a97afd6123caf00025646f637d05508c7ac840b2d78f76a39)
 
 !> 三个群选一个加就好了，但是你们能不能不要加进来秒退啊！我不要面子的嘛？![bq2.jpg](https://i.loli.net/2018/07/30/5b5e8574c76da.jpg)
 
