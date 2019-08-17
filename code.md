@@ -12,6 +12,7 @@ var content = ''
 Array.from(tbody).forEach(tr => {
   var text = '| '
   Array.from(tr.children).forEach(td=>{
+    if(tr.children[0]===td) return
     if (td.innerText==='男'){
       man += 1;
     } else if (td.innerText === '女'){
