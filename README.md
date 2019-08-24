@@ -4,7 +4,19 @@
 
 ## 开始
 
-点击**左下角↙三条杠的绿色导航按钮**开始阅读
+* [关于学校](/aboutSchool)
+* [通知书相关](/noticeRelated)
+* [开学相关](/schoolOpens)
+* [2019 录取名单](/luqu)
+    * [高考](/luqu/gaokao)
+    * [对口升学](/luqu/duikou)
+    * [三二分段](/luqu/saner)
+    * [单独招生](/luqu/dandu)
+* [其他资料](/other)
+    * [群聊](/qqgroup)
+    * [课程介绍](/courseIntroduction)
+    * [画廊](/gallery)
+    * [代码](/code)
 
 ### 阅读指南
 
