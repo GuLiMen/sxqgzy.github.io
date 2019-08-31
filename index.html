@@ -21,21 +21,56 @@
       width: 25px;
       height: 4px;
     }
-    .image{
-      height: 80px;
+
+    .waad-box {
       display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-      flex-direction: column;
       align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      position: relative;
+      margin-bottom: 10px;
     }
-    .image img{
+
+    .waad-box::after {
+      content: '广告';
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      background: #ececec;
+      color: #a2a2a2;
+      padding: 0 10px;
+      border-radius: 10px;
+      font-size: .2rem;
+
+    }
+
+    .waad-box__img {
+      width: 80px;
+    }
+
+    .waad-box__img img {
+      width: 100%;
       height: 100%;
+    }
+
+    .waad-box__content {
+      margin-left: 20px;
+
+    }
+
+    .waad-box__title {
+      font-size: 1.25rem;
+    }
+
+    .waad-box__desc {
+      font-size: .9rem;
+      color: #626764;
     }
   </style>
 </head>
 
 <body>
+
   <div id="app"></div>
   <script>
     window.$docsify = {
@@ -51,9 +86,18 @@
       },
       plugins: [
         function (hook, vm) {
+          var headerHtml =
+            `<div class="waad-box">
+      <div class="waad-box__img">
+        <img src='https://i.loli.net/2019/08/31/RGegfVSdltxD98w.jpg' />
+      </div>
+      <div class="waad-box__content">
+        <div class="waad-box__title">想看电影？就上 ITicket</div>
+        <div class="waad-box__desc">微信扫描小程序码，超低价购买电影票 🎥</div>
+      </div>
+    </div>`;
           hook.beforeEach(function (html) {
-            return `<div class="image"><img
-                src='https://i.loli.net/2019/08/17/hZ6oMwCYcaHdePp.jpg' /><span>救救学长的小程序吧！❄️</span></div>
+            return `${headerHtml}
             \n\n${html}\n\n<a href="https://github.com/sxqgzy" target="_blank"
               style="color: inherit; font-weight: normal; text-decoration: none;">轻院计算机开源学会(COSF)</a>`
           })
